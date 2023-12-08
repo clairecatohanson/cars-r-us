@@ -1,3 +1,4 @@
+import { VehicleOptions } from './VehicleTypes.js'
 import { PaintOptions } from './Paints.js'
 import { InteriorOptions } from './Interiors.js'
 import { WheelOptions } from './Wheels.js'
@@ -7,6 +8,7 @@ import { CustomOrderList } from './CustomOrders.js'
 
 
 const render = async () => {
+    const vehiclesHTML = await VehicleOptions()
     const paintsHTML = await PaintOptions()
     const interiorsHTML = await InteriorOptions()
     const wheelsHTML = await WheelOptions()
@@ -18,6 +20,9 @@ const render = async () => {
     <section id="order-form" class="block">
     <h2 class="block__heading">Personal Car Builder</h2>
     <div class="flex-container">
+    <article class="block__card">
+    ${vehiclesHTML}
+    </article>
     <article class="block__card">
     ${paintsHTML}
     </article>

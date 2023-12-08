@@ -1,8 +1,14 @@
 const transientState = {
+    vehicleTypeId: 0,
     paintId: 0,
     interiorId: 0,
     wheelId: 0,
     technologyId: 0,
+}
+
+export const setVehicleOption = (userSelection) => {
+    transientState.vehicleTypeId = userSelection
+    console.log(transientState)
 }
 
 export const setPaintOption = (userSelection) => {
